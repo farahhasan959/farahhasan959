@@ -1,0 +1,66 @@
+﻿@model RightProject.Models.AdminManager
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+<div class="overlay">
+    <div id="pageintro" class="hoc clear">
+        <form asp-action="RegisterAdd">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--<div class="text-danger">
+                @{
+                    string mess = string.Empty;
+                    if (RightProject.Controllers.Account.Message != null)
+                    {
+                        mess = RightProject.Controllers.Account.Message.ToString();
+                    }
+                }@mess
+            </div>-->
+            <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label asp-for="Name" class="heading"></label>
+                    <input asp-for="Name" class="form-control input-text" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Username" class="heading"></label>
+                    <input asp-for="Username" class="form-control input-text" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Password" class="heading"></label>
+                    <input asp-for="Password" class="form-control input-text" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="PasswordConfirm" class="heading"></label>
+                    <input asp-for="PasswordConfirm" class="form-control input-text" />
+                    <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Email" class="heading"></label>
+                    <input asp-for="Email" class="form-control input-text" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="formgroup text-right">
+
+                <button class="btn" type="submit">Add</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.js"></script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

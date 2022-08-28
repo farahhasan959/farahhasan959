@@ -1,0 +1,70 @@
+﻿@model RightProject.Models.Customer
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+
+<div class="overlay">
+    <div id="pageintro" class="hoc clear">
+
+        <section class="group">
+            <div class="one_half first"><img style="margin-top:50px" class="inspace-15 borderedbox" src="~/images/m.jpg"></div>
+            <div class="one_half">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Username" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Username)</p>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="Name" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Name)</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Password" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Password)</p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="PasswordConfirm" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.PasswordConfirm)</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Gender" class="heading">Manufact</label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Gender)</p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Address" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Address)</p>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Bdate" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Bdate)</p>
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Email" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Email)</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+   
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+

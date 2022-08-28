@@ -1,0 +1,88 @@
+﻿@model RightProject.Models.ShopManager
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+<div >
+    <div>
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="text-danger">
+                @{
+                    string mess = string.Empty;
+                    if (RightProject.Controllers.Account.Message != null)
+                    {
+                        mess = RightProject.Controllers.Account.Message.ToString();
+                    }
+                }@mess
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+                <!-- <div class="form-group col-md-6">
+        <label style="color: #3a8bcd; font-size: 20px;" asp-for="Gender" class="heading"></label>
+        <input style="width:300px;" asp-for="Gender" class="form-control input-text" />
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>-->
+
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Name" class="heading">Full Name</label>
+                    <input style="width:300px;" asp-for="Name" class="form-control input-text" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Salary" class="heading"></label>
+                    <input style="width:300px;" asp-for="Salary" class="form-control input-text" />
+                    <span asp-validation-for="Salary" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+
+
+                
+
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Password" class="heading">Password</label>
+                    <input type="password" style="width:300px;" asp-for="Password" class="form-control input-text" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Username" class="heading">UserName</label>
+                    <input style="width:300px;" asp-for="Username" class="form-control input-text" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="PasswordConfirm" class="heading">Confirm Password</label>
+                    <input type="password" style="width:300px;" asp-for="PasswordConfirm" class="form-control input-text" />
+                    <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Email" class="heading">Email</label>
+                    <input style="width:300px;" asp-for="Email" class="form-control input-text" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+
+
+            </div>
+
+            <div class="formgroup text-right">
+
+                <button style="width:157px; margin-right: 130px; margin-top: -37px; background-color: #3a8bcd; border-color: #3a8bcd;" class="btn" type="submit">Add</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.js"></script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,68 @@
+﻿<div class="overlay">
+    <div id="pageintro" class="hoc clear">
+        <link href="~/css/chpas.css" rel="stylesheet" />
+      
+        <div class="text-danger">
+            @RightProject.Controllers.Account.Message
+        </div>
+        <div class="text-success">
+            @RightProject.Controllers.Account.SuccessMsg
+        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn">forget password</button>
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+
+            <form asp-action="forget" class="modal-content animate" style="width:600px;height:900px;background:url('@Url.Content("~/images/back3.jpg")'); ">
+                <div class="imgcontainer">
+
+                    <img style="width:250px;height:250px" src="~/images/icon.jpg" />
+                </div>
+
+                <div class="container">
+                    <!--<label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>-->
+
+                    <label style="color:white;font-size:90px;margin-left:130px" class="heading" for="pass"><b>forget</b></label>
+                    <label style="color:#808080;font-size: 40px" class="heading">email</label>
+                    <input style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box; " type="email" required name="email" class="form-control input-text" placeholder="Enter email" />
+                    <span class="text-danger"></span>
+
+
+                    <label style="color: #808080;font-size: 40px" class="heading">Password</label>
+                    <input style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box; " required name="pass" class="form-control input-text" placeholder="Enter Password" />
+
+
+                    <label style="color:#808080;font-size: 40px" class="heading">confirm password</label>
+                    <input style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box; " name="passconfirm" class="form-control input-text" placeholder="confirm password" />
+
+
+
+                    <button class="btn" type="submit">Congirm</button>
+
+                </div>
+
+                <div style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn">Cancel</button>
+                    <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+                    <br />
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+                var model = document.getElementById('id01');
+                window.onclick = function (event) {
+                    if (event.target == model) {
+                        model.style.display = "none";
+
+                    }
+                }
+    </script>
+}

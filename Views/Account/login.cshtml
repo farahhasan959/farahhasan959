@@ -1,0 +1,39 @@
+﻿@model RightProject.Controllers.Account.LoginModel
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/addcustomer.css" />
+    <div style="background-color: ghostwhite; margin-left: 0px; height: 660px; font-size: 54px">
+        <div style="margin-left: 338px; ">
+            You can't login
+        </div>
+
+        <img style="
+        width: 150px;
+        height: 150px;
+        margin-left: 464px;
+        margin-right: 150px;
+        margin-bottom: 150px;
+" src="~/images/Lo.png" />
+    </div>
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            <script>
+                var model = document.getElementById('id01');
+                window.onclick = function (event) {
+                    if (event.target == model) {
+                        model.style.display = "none";
+
+                    }
+                }
+            </script>
+            <script>
+                var model = document.getElementById('id02');
+                window.onclick = function (event) {
+                    if (event.target == model) {
+                        model.style.display = "none";
+
+                    }
+                }
+            </script>
+        }

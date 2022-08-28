@@ -1,0 +1,227 @@
+﻿@model RightProject.Controllers.Account.LoginModel
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/addcustomer.css" />
+
+    <title> !</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/css/fontawesome.css">
+    <link rel="stylesheet" href="~/css/tooplate-main.css">
+    <link rel="stylesheet" href="~/css/owl.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/addcustomer.css" />
+    <!--
+    Tooplate 2114 Pixie
+    https://www.tooplate.com/view/2114-pixie
+    -->
+</head>
+    <link href="~/css/chpas.css" rel="stylesheet" />
+
+    
+
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <div class="banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="caption">
+                                <h2>Welcome You .. </h2>
+                                <div class="line-dec"></div>
+                                <p style="font-size: 20px;">If you are a shop manager ,This website enable you to manage your shop,products and Orders so you can </p>
+                                <h2>login as </h2>
+
+                                <!-- <br><br>Please tell your friends about <a rel="nofollow" href="https://www.facebook.com/tooplate/">Tooplate</a> free template site. Thank you. Photo credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels website</a>.</p> -->
+                                <div class="main-button text-center" style="color:#3a8bcd;">
+                                    <br>
+                                    <div class="formgroup text-right">
+
+                                        <button onclick="document.getElementById('id01').style.display='block'" style="width: 242px; color: white; background-color: #3a8bcd; border-color: #3a8bcd; margin-right: 143px;" class="btn btn-outline-primary" type="submit">admin</button>
+
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="main-button text-center" style="color:#3a8bcd;">
+                                    <button onclick="document.getElementById('id02').style.display='block'" style="width: 244px; color: white; background-color: #3a8bcd; border-color: #3a8bcd; margin-right: 136px;" class="btn btn-outline-primary"> manager</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+
+                <form asp-controller="Account" asp-action="login2" class="modal-content animate" style="width:300px;height:400px;background-color:ghostwhite; ">
+                    <!--<div class="imgcontainer">
+
+               <img style="width:150px;height:150px" src="~/images/icon.jpg" />
+            </div>-->
+
+                    <div class="container">
+
+                        <label style="color:#808080;font-size: 17px; margin:-5px 5px;" class="heading">Username</label>
+                        <input required asp-for="Username" name="username" style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" placeholder="Enter UserName" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+
+
+                        <label style="color: #808080; font-size: 17px; margin:-5px 5px" class="heading">Password</label>
+                        <input required asp-for="Password" name="password" type="password" class="form-control input-text" style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" placeholder="Enter Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+
+                        <!-- <input asp-for="rememberMe" value="remeber me" id="rm" name="rem" class="form-control input-text " style="color: #808080; font-size: 13px;  height: 15px;width:15px; margin:-10px 0px 0px 150px;" placeholder="Check" />
+                <label for="rm" style="color: #808080; font-size:15px; display:block;" class="heading">rememberMe</label>
+                <span asp-validation-for="rememberMe" class="text-danger"></span>
+                   -->
+                        <button style="background-color: #3a8bcd; width: 86%; margin-left: 18px; height: 37px; padding: 0; margin-top: 21px; " type="submit" class="btn"> Login </button>
+
+                    </div>
+                    <button onclick="document.getElementById('id06').style.display='block'" style="background-color: #3a8bcd; width: 228px; margin-left: 33px;margin-top:-7px; height: 37px; padding: 0;" class="btn">forget password</button>
+                    <div>
+                        <button class="btn" type="button" onclick="document.getElementById('id01').style.display='none'" style="background-color: #3a8bcd; width: 77%; margin-left: 32px; height: 37px; padding: 0;">Cancel</button>
+                        <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+                        <br />
+                    </div>
+                </form>
+            </div>
+            <div id="id06" class="modal">
+                <span onclick="document.getElementById('id06').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+
+                <form asp-controller="Account" asp-action="forget2" class="modal-content animate" style="width:300px;height:400px;background-color:ghostwhite; ">
+                    
+
+                    <div class="container">
+                      
+
+                       
+                        <label style="color: #808080; font-size: 17px; margin:-5px 5px" class="heading">email</label>
+                        <input style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" placeholder="Enter emai" type="email" required name="email"  />
+                        <span class="text-danger"></span>
+
+
+                        <label  style="color: #808080; font-size: 17px; margin:-5px 5px" class="heading">Password</label>
+                        <input type="password" style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" placeholder="Enter pass" required name="pass"  />
+
+
+                        <label  style="color: #808080; font-size: 17px; margin:-5px 5px" class="heading">confirm password</label>
+                        <input type="password"  style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" placeholder="confirm pass" name="passconfirm"/>
+
+
+
+                        <button style="background-color: #3a8bcd; width: 86%; margin-left: 18px; height: 37px; padding: 0; " type="submit" class="btn">Congirm</button>
+
+                    </div>
+
+                    <div style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id06').style.display='none'" class="btn" style="background-color: #3a8bcd; width: 77%; margin-left: 32px; height: 37px; padding: 0;">Cancel</button>
+                       
+                        <br />
+                    </div>
+                </form>
+            </div>
+            <div id="id02" class="modal">
+                <span onclick="document.getElementById('id02').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+
+                <form asp-controller="Account" asp-action="login" class="modal-content animate" style="width:300px;height:400px;background-color:ghostwhite; ">
+                    <!--<div class="imgcontainer">
+
+       <img style="width:150px;height:150px" src="~/images/icon.jpg" />
+    </div>-->
+                    @{
+                        string mess = string.Empty;
+                        if (RightProject.Controllers.Account.Message != null)
+                        {
+                            mess = RightProject.Controllers.Account.Message.ToString();
+                        }
+                    }@mess
+                    <div class="container">
+
+                        <label style="color:#808080;font-size: 17px; margin:-5px 5px;" class="heading">Username</label>
+                        <input required asp-for="Username" name="username" style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" placeholder="Enter UserName" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+
+
+                        <label style="color: #808080; font-size: 17px; margin:-5px 5px" class="heading">Password</label>
+                        <input required asp-for="Password" name="password" type="password" class="form-control input-text" style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" placeholder="Enter Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+
+                        <!-- <input asp-for="rememberMe" value="remeber me" id="rm" name="rem" class="form-control input-text " style="color: #808080; font-size: 13px;  height: 15px;width:15px; margin:-10px 0px 0px 150px;" placeholder="Check" />
+        <label for="rm" style="color: #808080; font-size:15px; display:block;" class="heading">rememberMe</label>
+        <span asp-validation-for="rememberMe" class="text-danger"></span>
+           -->
+                        <button style="background-color: #3a8bcd; width: 86%; margin-left: 18px; height: 37px; padding: 0; " type="submit" class="btn"> Login </button>
+
+                    </div>
+                    <button onclick="document.getElementById('id06').style.display='block'" style="background-color: #3a8bcd; width: 228px; margin-left: 33px;margin-top:-7px; height: 37px; padding: 0;" class="btn">forget password</button>
+                    <div>
+                        <button class="btn" type="button" onclick="document.getElementById('id02').style.display='none'" style="background-color: #3a8bcd; width: 77%; margin-left: 32px; height: 37px; padding: 0;">Cancel</button>
+                        <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+                        <br />
+                    </div>
+                </form>
+            </div>
+            <script src="~/js/jquery.min.js"></script>
+            <script src="~/js/bootstrap.bundle.min.js"></script>
+
+
+            <!-- Additional Scripts -->
+            <script src="~/js/custom.js"></script>
+            <script src="~/js/owl.js"></script>
+            <script src="~/js/jquery-3.6.0.min.js"></script>
+            <script src="~/js/popper.min.js"></script>
+            <script src="~/js/bootstrap.js"></script>
+        </main>
+
+
+
+    </div>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        <script>
+            var model = document.getElementById('id01');
+            window.onclick = function (event) {
+                if (event.target == model) {
+                    model.style.display = "none";
+
+                }
+            }
+        </script>
+        <script>
+            var model = document.getElementById('id02');
+            window.onclick = function (event) {
+                if (event.target == model) {
+                    model.style.display = "none";
+
+                }
+            }
+        </script>
+        <script>
+            var model = document.getElementById('id06');
+            window.onclick = function (event) {
+                if (event.target == model) {
+                    model.style.display = "none";
+
+                }
+            }
+        </script>
+    }
+
+

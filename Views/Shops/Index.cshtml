@@ -1,0 +1,100 @@
+﻿@model IEnumerable<RightProject.Models.Shop>
+
+<div><div>
+        <!-- <h6 class="heading">You can create new item</h6>
+
+            <a class="btn" asp-action="Create">New</a>
+    -->
+        <!--<h6 class="heading">Click on picture to see details</h6>-->
+        
+            <div class="input-group"></div>
+          
+                <div class="formgroup col-md-4 text-right " style="margin-left:646px;">
+                    <a style=" background-color: #3a8bcd; border-color: #3a8bcd;" class="btn" asp-action="Create">Add New Shop</a>
+                </div>
+
+            
+        
+
+        <!--  <ul class="nospace clear latestimg">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a class="imgover" asp-action="Details" asp-route-id="@item.Shopid">
+                    <img src="~/images/sss.jpg">
+                </a>
+                <figcaption>
+                    <h6 class="heading">@Html.DisplayFor(modelItem => item.Name)</h6>
+                </figcaption>
+            </li>
+
+        }
+
+    </ul>-->
+    <table style="margin:50px;width:900px;border-radius:0.25rem; ">
+        <thead>
+            <tr>
+                <th style="color: cornsilk; background-color: #3a8bcd;">
+                    <label class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-0.5rem;">Name</label>
+
+                </th>
+                <th style="color: cornsilk; background-color: #3a8bcd;">
+                    <label class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">Location</label>
+
+                </th>
+                <th style="color: cornsilk; background-color: #3a8bcd;">
+                    <label for="inputEmail4" class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">Phonenumber</label>
+
+                </th>
+                <th style="color: cornsilk; background-color: #3a8bcd;">
+                    <label for="inputCity" class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">Manager's Name</label>
+
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Locathion)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Phonenumber)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Manager.Name)
+                </td>
+
+
+
+
+                <!-- <td>
+         <a asp-action="Edit" asp-route-id="@item.Shopid">Edit</a>
+
+     </td>-->
+            </tr>
+
+
+            }
+        </tbody>
+    </table>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

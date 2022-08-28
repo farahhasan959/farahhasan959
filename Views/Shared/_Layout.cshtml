@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    @*<link href="~/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">*@
+    <link href="~/css/layout/styles/layout.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/addcustomer.css" />
+</head>
+<body id="top">
+
+
+
+    <div class="bgded">
+
+        <div style="background:url('@Url.Content("~/images/back3.jpg")');" class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <div id="logo" class="fl_left">
+
+                    <!--<h1 style="color: #3a8bcd" class="active"><a>Welcome</a></h1>-->
+
+                </div>
+                <nav style="align-content:center" id="mainav" class="fl_right">
+                    <ul class="clear">
+                        @{
+                            string name = User.FindFirst(ClaimTypes.Name)?.Value;
+                            if (!string.IsNullOrEmpty(name))
+                            {
+                                <li class="active">
+                                    <a style="color: #3a8bcd" asp-area="">Hello : @name</a>
+                                </li>
+                                <li class="active">
+                                    <a style="color: #3a8bcd" asp-area="" asp-controller="Account" asp-action="logout">logout</a>
+                                </li>
+
+                            }
+                        }
+                        @{
+                            string role = User.FindFirst(ClaimTypes.Role)?.Value;
+                            if (!string.IsNullOrEmpty(role) && role == "Admin")
+                            {
+                                //customer   shopmanager shops Admins
+
+
+                            }
+                        }
+                        @{
+                            string na = User.FindFirst(ClaimTypes.Role)?.Value;
+                            if (!string.IsNullOrEmpty(na) && na == "ShopManager")
+                            {
+                                //products orders
+
+
+                            }
+                        }
+                        <li class="active">
+                            <a onclick="document.getElementById('id03').style.display='block'" style="color: #3a8bcd" asp-area="" asp-controller="Account" asp-action="changepassword">Change pass</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="ShopManagers" asp-action="Index">ShopManagers</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="Shops" asp-action="Index">Shops</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="Gifts" asp-action="Index">Gifts</a>
+                        </li>
+                        <li class="active"><a style="color: #3a8bcd" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li style="color: #3a8bcd" class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="myshop" asp-action="shop">My Shop</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="AddOrder" asp-action="AddOrderProduct">orders</a>
+                        </li>
+                        <li class="active">
+                            <a style="color: #3a8bcd" asp-area="" asp-controller="Account" asp-action="RegisterAdd">Register</a>
+                       
+
+
+
+
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+        
+
+    </div>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+
+    <!--<footer class="border-top footer text-muted" style="background:url('@Url.Content("~/images/back3.jpg")');">
+        <div class="container">
+
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>-->
+
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

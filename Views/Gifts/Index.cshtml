@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RightProject.Models.Gift>
+
+
+<div>
+    <div>
+       
+
+        <div class="input-group"></div>
+
+        <div class="formgroup col-md-4 text-right " style="margin-left:646px;">
+            <a style=" background-color: #3a8bcd; border-color: #3a8bcd;" class="btn" asp-action="Create">Add New Gift</a>
+        </div>
+
+
+
+
+
+     
+        <table style="margin:50px;width:900px;border-radius:0.25rem; ">
+            <thead>
+                <tr>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-0.5rem;">Name</label>
+
+                    </th>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">Details</label>
+
+                    </th>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label for="inputEmail4" class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">points</label>
+
+                    </th>
+                
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Details)
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Points)
+                        </td>
+                       
+
+
+
+
+                    </tr>
+
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

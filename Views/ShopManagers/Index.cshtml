@@ -1,0 +1,71 @@
+﻿@model IEnumerable<RightProject.Models.ShopManager>
+
+<div>
+    <div>
+
+
+        <div class="input-group"></div>
+
+        <div class="formgroup col-md-4 text-right " style="margin-left:646px;">
+            <a style=" background-color: #3a8bcd; border-color: #3a8bcd;" class="btn" asp-controller="Account" asp-action="Register">Add New Manager</a>
+        </div>
+
+
+
+
+        <table style="margin:50px;width:900px;border-radius:0.25rem; ">
+            <thead>
+                <tr>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-0.5rem;">Name</label>
+
+                    </th>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">Email</label>
+
+                    </th>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label for="inputEmail4" class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">Salary</label>
+
+                    </th>
+                    <th style="color: cornsilk; background-color: #3a8bcd;">
+                        <label for="inputCity" class="lable" style="color: white; font-size: 15px; margin-left:10px;margin-bottom:-1.5rem;">User Name</label>
+
+                    </th>
+               
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Salary)
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Username)
+                        </td>
+                       
+
+
+
+                    </tr>
+
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

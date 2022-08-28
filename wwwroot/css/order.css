@@ -1,0 +1,129 @@
+.gift_for_you{
+    max-width: 1200px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
+    padding: 30px;
+}
+.gift_for_you .title{
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 3em;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #57061a;
+    background: linear-gradient(to right,#cc3630 10%,#57061a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+ 
+}
+div .input-text{
+    width: 50%;
+    /* padding: 5px 5px; */
+    margin: 15px 0 0 0;
+    outline: none;
+    font-size: 1.2rem;
+
+}
+.btn-secondary{
+    width: 50%;
+    /* padding: 5px 5px; */
+    margin: 15px 0 0 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: #fff;
+    background-image: linear-gradient(125deg,#b81a41,#57061a);
+    /* border-color: #6c757d; */
+    margin: 15px 0 0 0;
+
+}
+.lable{
+    /* position: absolute; */
+    left: 20px;
+    bottom: 20px;
+    top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #b81a41;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+    padding: 1px;
+    font-weight: 500;
+    margin-top: 1em;
+    
+}
+/* .inputor{
+margin-left: 3em;
+} */
+#barcode {
+
+    width: 90%;
+
+    margin: 25px 0;
+
+    border: 2px solid #b81a41;
+    border-radius: 3em;
+    
+    height: 350px;
+
+}
+.submit{
+    width: 25%;
+
+    padding: 10px 0;
+
+    font-size: 1.2rem;
+
+    /* font-family: Josefin Sans; */
+
+    border: none;
+
+    outline: none;
+
+    margin: 15px 0;
+
+    background-color: #f89b29;
+
+    color: #fff;
+
+    transition: 0.3s;
+
+}
+.main .submit:hover {
+
+    box-shadow: 0 15px 25px -10px #f89b29;
+
+}
+.primary{
+    background-image: linear-gradient(125deg,#b81a41,#57061a);
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    margin:20px;
+    display: inline-block;
+    /* padding: 8px 16px; */
+    padding: 10px 0;
+ 
+
+
+}
+table{
+    margin: 50px;
+    padding: 50px ;
+	text-align: center;
+    background-image: linear-gradient(125deg,#b81a41,#57061a);
+	color: #fff;
+}
+
+#show th, #show td{
+	padding: 13px;
+}
+
+#btna td input{
+	width: 100%;
+}

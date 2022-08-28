@@ -1,0 +1,54 @@
+﻿@model RightProject.Models.Shop
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+
+<div class="overlay">
+    <div id="pageintro" class="hoc clear">
+
+        <section class="group">
+            <div class="one_half first"><img style="margin-top:50px" class="inspace-15 borderedbox" src="~/images/sss.jpg"></div>
+            <div class="one_half">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Managerid" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Managerid)</p>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="Name" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Name)</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Locathion" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Locathion)</p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Phonenumber" class="heading"></label>
+                        <p class="form-control input-text">@Html.DisplayFor(model => model.Phonenumber)</p>
+                    </div>
+                </div>
+                
+
+
+
+
+            </div>
+        </section>
+        <a class="btn" asp-action="Delete" asp-route-id="@Model.Shopid">
+            You can delete this product
+        </a>
+        <a class="btn" asp-action="Edit" asp-route-id="@Model.Shopid">
+            You can edit this product
+        </a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+

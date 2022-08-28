@@ -1,0 +1,81 @@
+﻿@model IEnumerable<RightProject.Models.Product>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/addcustomer.css" />
+    <div style="background-color:ghostwhite;">
+        <!--<div>
+        <img style="margin-left:400px;" src="~/images/cart.jpg">
+    </div>-->
+
+        <div style="padding:10px;">
+
+
+
+
+           
+
+
+            
+
+        <form asp-action="Index" method="get">
+
+            <div class="input-group"></div>
+            <div class="form-row">
+                <input style="" type="text" class="form-control form-group col-md-4" name="search" placeholder="searching..." />
+                <div class="btn-search form-group col-md-4">
+                    <button style=" background-color: #3a8bcd; border-color: #3a8bcd;width:40px; " type="submit" class="btn btn-block ">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div class="formgroup col-md-4 text-right">
+                    <a style=" background-color: #3a8bcd; border-color: #3a8bcd; " class="btn" asp-action="Create">New product</a>
+                </div>
+
+            </div>
+
+        </form>
+
+
+        </div>
+
+        <ul style="margin-left:150px;" class="nospace clear">
+            @foreach (var item in Model)
+            {
+
+                <li class="one_quarter">
+
+                    <div class="block clear">
+                        <div style="width: 190px; height: 300px; border: 1px solid; border-color: white; " class="one_half first">
+                            <a asp-action="Details" asp-route-id="@item.Productid">
+                                <div style="background-color:white; padding: -13px 0; height: 280px;width:220px; border: 1px solid; border-color: lightblue; " class="container">
+                                    <img style="width:220px;height:230px;margin-top:-100px;margin-left:-15px;" src="~/images/products/@Html.DisplayFor(modelItem => item.Picture)">
+                                    <figcaption style="color: #3a8bcd">
+                                        <h6 style="margin-left:30px;margin-top:10px;font-size:20px;" class="heading">@Html.DisplayFor(modelItem => item.Name)</h6>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </li>
+
+            }
+
+        </ul>
+
+        <script src="~/js/jquery-3.6.0.min.js"></script>
+        <script src="~/js/popper.min.js"></script>
+        <script src="~/js/bootstrap.js"></script>
+
+    </div>
+
+
+
+
+
+
+
+
+

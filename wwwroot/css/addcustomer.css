@@ -1,0 +1,122 @@
+.bg{
+    background: url('../image/giftbs.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    filter: blur(5px);
+    
+}
+
+
+.gift_for_you{
+    max-width: 1200px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
+    padding: 30px;
+}
+.gift_for_you .title{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #57061a;
+    background: linear-gradient(to right,#f4524d 10%,#57061a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+ 
+}
+.input-text{
+    width: 85%;
+    }
+.lable{
+    /* position: absolute; */
+    left: 20px;
+    bottom: 30px;
+    top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #b81a41;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    font-weight: 500;
+    
+}
+.submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg,#b81a41,#57061a);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border:none;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+    outline: none;
+} 
+/* f4524d */
+/* #b81a41 */
+.primary{
+    background-image: linear-gradient(125deg,#b81a41,#57061a);
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    margin:20px;
+    display: inline-block;
+    padding: 8px 16px;
+ 
+
+
+}
+
+/* .contact-form .form-field{
+    position: relative;
+    margin:32px 0;
+}
+
+ 
+
+.contact-form .input-text:focus + .lable,
+.contact-form .input-text.not-empty + .lable{
+    transform: translateY(-24px);
+}
+.contact-form .input-text:focus
+{ 
+    outline: none;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* h1{
+font-family:Arial, Helvetica, sans-serif;
+font-size: 6vw;
+font-style: italic;
+font-weight: 100;
+padding: 7rem;
+position: relative;
+    
+} */

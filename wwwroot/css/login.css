@@ -1,0 +1,64 @@
+.bg{
+    background: url('../image/giftbs.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    filter: blur(5px);
+    
+}
+
+.form-container{
+    position:absolute;
+    background-color: #fff;
+    top: 15vh;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
+    height: fit-content;
+    width:max-content;
+ 
+  
+}
+.primary{
+    background-image: linear-gradient(125deg,#b81a41,#57061a);
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    margin:10px;
+    display: inline-block;
+    padding: 8px 16px;
+
+
+}
+.lable{
+    /* position: absolute; */
+    left: 10px;
+    bottom: 10px;
+    top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #b81a41;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+    padding: 5px;
+    font-weight: 500;
+    
+}
+h3{
+    /* text-transform: uppercase; */
+    text-align: left;
+    /* letter-spacing: 1px; */
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 10px;
+    color: #57061a;
+    background: linear-gradient(to right,#cc312b 2%,#57061a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+ 
+}

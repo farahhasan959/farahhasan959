@@ -1,0 +1,36 @@
+﻿
+@model RightProject.Models.ShopManager
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Change" class="modal-content animate" style="width: 692px; height: 294px; background-color: ghostwhite; margin-left: 152px; margin-top: 5px; padding: 29px; ">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="text-danger">
+                @ViewBag.msg
+            </div>
+
+
+
+            <div class="form-group">
+                <label style="color:#808080;font-size: 17px; margin:-5px 5px;" class="heading">password</label>
+                <input style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" placeholder="new pass" type="password" name="pass" required />
+
+            </div>
+            <div class="form-group">
+                <label style="color:#808080;font-size: 17px; margin:-5px 5px;" class="heading">Confirm password</label>
+                <input style="color: #808080; font-size: 13px; margin: 10px 16px; height: 30px;width:87%;" class="form-control input-text" type="password" placeholder="confirm pass" name="passconfirm" required />
+
+            </div>
+
+            <div class="form-group">
+                <input style="background-color: #3a8bcd; width: 86%; margin-left: 18px; height: 37px; padding: 0; " type="submit" value="change password" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+}

@@ -1,0 +1,51 @@
+﻿
+@model RightProject.Models.Shop
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+
+
+<div style="">
+    
+        <form style="margin-top: 80px;" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div  style="margin-left:100px;" class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Managerid" style="color: #3a8bcd; font-size: 20px;">Manager</label>
+                    <select style="width:300px;" asp-for="Managerid" class="form-control input-text" asp-items="ViewBag.Managerid"></select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Name" class="heading"></label>
+                    <input style="width:300px;" asp-for="Name" class="form-control input-text" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div  style="margin-left:100px;" class="form-row">
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Locathion" class="heading"></label>
+                    <input style="width:300px;" asp-for="Locathion" class="form-control input-text" />
+                    <span asp-validation-for="Locathion" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;" asp-for="Phonenumber" class="heading"></label>
+                    <input style="width:300px;" asp-for="Phonenumber" class="form-control input-text" />
+                    <span asp-validation-for="Phonenumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="formgroup text-right">
+
+                <button style="margin-right: 150px; margin-top: 50px; background-color: #3a8bcd; border-color: #3a8bcd;" class="btn" type="submit">Add</button>
+
+            </div>
+        </form>
+   
+</div>
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.js"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

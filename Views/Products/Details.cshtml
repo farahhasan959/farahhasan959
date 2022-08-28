@@ -1,0 +1,73 @@
+﻿@model RightProject.ViewModel.ShopN
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+
+<div style="background-color:ghostwhite;" >
+    <div>
+
+        <section class="group">
+            <div class="one_half first"><img style="margin-left:100px;margin-bottom:50px;width:300px;" class="inspace-15 borderedbox" src="~/images/products/@Html.DisplayFor(model => model.product.Picture)"></div>
+            <div class="one_half">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">ShopName: @Html.DisplayFor(model => model.shopname)</label>
+                      
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">Name: @Html.DisplayFor(model => model.product.Name)</label>
+                        
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">Properties: @Html.DisplayFor(model => model.product.Properties) </label>
+                       
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">Type: @Html.DisplayFor(model => model.product.Type)</label>
+                       
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">Manufact: @Html.DisplayFor(model => model.product.Manufacturer)</label>
+
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">Price: @Html.DisplayFor(model => model.product.Price)</label>
+
+                        <!-- <div class="form-group col-md-6">
+            <label  class="heading">PointsToBuy</label>
+            <p class="form-control input-text">@Html.DisplayFor(model => model.product.PointsToBuy)</p>
+        </div>-->
+
+                    </div></div>
+                <div class="form-row">
+
+
+                   
+                    <div class="form-group col-md-6">
+                        <label style="color: #3a8bcd; font-size: 20px;">Points: @Html.DisplayFor(model => model.product.Points)</label>
+
+                    </div>
+                </div>
+
+
+
+         
+            </div>
+        </section>
+      
+       
+        <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+

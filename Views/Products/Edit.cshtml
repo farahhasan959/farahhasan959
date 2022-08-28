@@ -1,0 +1,97 @@
+﻿@model RightProject.Models.Product
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+
+
+<div style="background-color:ghostwhite;">
+    <div>
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Productid" />
+            <div style="margin-left:100px;" class="form-row">
+                <!-- <div class="form-group col-md-6">
+         <label asp-for="shopId" style="color: white; font-size: 20px;"></label>
+         <select asp-for="shopId" class="form-control input-text" asp-items="ViewBag.shopId"></select>
+     </div>-->
+
+                <div  class="form-group col-md-6">
+                    <label asp-for="Amount" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width:300px;" asp-for="Amount" class="form-control input-text">
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Name" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width: 300px;" asp-for="Name" type="text" class="form-control input-text">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Properties" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width: 300px" asp-for="Properties" class="form-control input-text">
+                    <span asp-validation-for="Properties" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Type" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width: 300px" asp-for="Type" type="text" class="form-control input-text">
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Manufacturer" style="color: #3a8bcd; font-size: 20px;">Manufact</label>
+                    <input style="width: 300px" asp-for="Manufacturer" type="text" class="form-control input-text" id="inputCity">
+                    <span asp-validation-for="Manufacturer" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Picture" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width: 300px" type="file" asp-for="Picture" accept=".png,.gif,.jpeg,.jpg,.bmp" class="form-control input-text" name="img" />
+                    <span asp-validation-for="Picture" class="text-danger"></span>
+                </div>
+            </div>
+            <div style="margin-left:100px;" class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Price" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width: 300px" asp-for="Price" class="form-control input-text">
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Points" style="color: #3a8bcd; font-size: 20px;"></label>
+                    <input style="width: 300px" asp-for="Points" class="form-control input-text">
+                    <span asp-validation-for="Points" class="text-danger"></span>
+                </div>
+            </div>
+
+           <!-- <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="PointsToBuy" style="color: white; font-size: 20px;"></label>
+                    <input style="width:85%;" asp-for="PointsToBuy" class="form-control input-text">
+                    <span asp-validation-for="PointsToBuy" class="text-danger"></span>
+                </div> <div class="form-group col-md-6">
+                    <label asp-for="Amount" style="color: white; font-size: 20px;"></label>
+                    <input style="width:85%;" asp-for="Amount" class="form-control input-text">
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+            </div>-->
+
+
+            <div class="formgroup text-right">
+
+                <button style="margin-right: 150px; margin-top: 50px; background-color: #3a8bcd; border-color: #3a8bcd;" class="btn" type="submit">Save changes </button>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.js"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<RightProject.Models.Product>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/addcustomer.css" />
+    <div style="background-color:ghostwhite;">
+        <div>
+            <!---<form method="get">
+                <div class="input-group"></div>
+                <div class="form-row">
+                    <input style="" type="text" class="form-control form-group col-md-4" name="search" placeholder="searching..." />
+                    <div class="btn-search form-group col-md-4">
+                        <button style=" background-color: #3a8bcd; border-color: #3a8bcd;width:40px; " type="submit" class="btn btn-block ">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="formgroup col-md-4 text-right">
+
+                    </div>
+
+                </div>
+
+            </form>-->
+
+
+            <form asp-action="AddOrderProduct">
+                <div class="form-row" style="margin-left:9px;">
+                    <div class="form-group col-md-4">
+
+                        <label style="color: #3a8bcd; font-size: 15px; margin-left:58px;margin-bottom:-3.5rem;">Add Customer</label>
+                        <input  name="UserName" style="width:288px;margin-left:239px;height:42px;margin-top:-2px;" class="form-control input-text" />
+
+                    </div>
+                    <input id="btnSub" class="btn form-group col-md-4" value="Add Products you select" type="submit" style="margin-left: 550px; margin-top:-51px;height:31px; background-color: #3a8bcd; border-color: #3a8bcd;" />
+                    </div>
+                    <!--
+
+        <div  class="form-group col-md-6">
+            <label asp-for="Amount" style="color: #3a8bcd; font-size: 20px;"></label>
+            <input style="width:300px;" asp-for="Amount" class="form-control input-text">
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+        -->
+                    <div></div>
+                    <table style="margin:50px;width:900px;border-radius:100px;" id="tbl">
+                        <thead style="background-color:cornflowerblue">
+                            <tr>
+                                <th style="color: cornsilk; background-color: #3a8bcd;">
+                                    Product's Name
+                                </th>
+                                <th style="color: cornsilk; background-color: #3a8bcd;">
+
+                                    <input class="ckheader" type="checkbox" />
+                                </th>
+                                <th style="color: cornsilk; background-color: #3a8bcd;">
+                                    Amount
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <p style="color:black;">@Html.DisplayFor(modelItem => item.Name)</p>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="ckitem" name="ID"
+                                               value="@item.Productid" />
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label style="color:black;" class="control-label">amount</label>
+                                            <input name="amount" class="form-control" />
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+    @section Scripts{
+        <script>
+            var $tbl = $('#tbl');
+            var $header = $tbl.find('thead .ckheader');
+            var $item = $tbl.find('tbody .ckitem');
+            $(function () {
+                $item.on('change', function () {
+                    if ($(this).is(':checked')) {
+                        $(this).closest('tr').addClass('NewRowColor');
+                    }
+                    else {
+                        $(this).closest('tr').removeClass('NewRowColor');
+                    }
+                });
+                $header.change(function () {
+                    var c = this.checked;
+                    $item.prop("checked", c);
+                    $item.trigger('check');
+                    if ($(this).is(':checked')) {
+                        $($item).closest('tr').addClass('NewRowColor');
+                    }
+                    else {
+                        $($item).closest('tr').removeClass('NewRowColor');
+                    }
+                });
+
+            });
+        </script>
+        <script>
+            $('btnSub').click(function () {
+                var count = $(".ckitem:checked").length;
+                if (count == 0) {
+                    alert("you do not select yet");
+                    return false;
+                } else {
+                    return confirm("you add" + count);
+                }
+            });
+        </script>
+    }

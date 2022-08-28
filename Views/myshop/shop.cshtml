@@ -1,0 +1,43 @@
+﻿@model RightProject.Models.Shop
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<link rel="stylesheet" href="~/css/addcustomer.css" />
+
+<div style="background-color: ghostwhite;">
+
+
+    <section class="group" style="height: 523px;">
+        <div class="one_half first"><img style="margin-left:100px;margin-bottom:50px;width:300px;" class="inspace-15 borderedbox" src="~/images/a.png"></div>
+        <div class="one_half">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;">Name: @Html.DisplayFor(model => model.Name)</label>
+
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;">Location: @Html.DisplayFor(model => model.Locathion)</label>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label style="color: #3a8bcd; font-size: 20px;">Name: @Html.DisplayFor(model => model.Phonenumber) </label>
+
+                </div>
+              
+            </div>
+           
+            
+
+
+
+
+        </div>
+    </section>
+
+
+</div>
+
